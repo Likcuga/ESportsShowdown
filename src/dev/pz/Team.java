@@ -2,7 +2,6 @@ package dev.pz;
 
 
 import java.util.List;
-
 enum gameOutcome {WON_GAME, TIED_GAME, LOST_GAME, FORFEIT, DELAYED}
 
 record Player(String playerName, String position){}
