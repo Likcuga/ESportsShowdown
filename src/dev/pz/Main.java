@@ -1,5 +1,6 @@
 package dev.pz;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,18 +16,22 @@ public class Main {
                 new Player("FASHR", GameRole.LONG));
         fnatic.printTeamMembers();
 
+        System.out.println("");
+
+        Team<CSGO> astralis = new Team<>("Astralis");
+        fnatic.initializeGameTeam(new Player("Xyp9x", GameRole.MIDDLE),
+                new Player("gla1ive", GameRole.SHORT),
+                new Player("blameF", GameRole.SHORT),
+                new Player("def1ce", GameRole.LONG),
+                new Player("Buzz", GameRole.LONG));
+        fnatic.printTeamMembers();
+        System.out.println("");
+
+        GameMatch<CSGO> fnaticVSAstralis = new GameMatch<>(fnatic, astralis);
+        fnaticVSAstralis.addPoint(fnatic);
+        System.out.println(fnaticVSAstralis.getGameOutcome());
+
+
     }
 
-
-
 }
-
-//    Team<CSGO> fnatic = new Team<CSGO>("FNatic");
-//    List <Player> fnaticRoster = new ArrayList<>();
-//        fnatic.addTeamMember(new Player("Nico", "Mid"), fnaticRoster);
-//        fnatic.addTeamMember(new Player("KRIMZ", "Short"), fnaticRoster);
-//        fnatic.addTeamMember(new Player("mezii", "Short"), fnaticRoster);
-//        fnatic.addTeamMember(new Player("roej", "Long"), fnaticRoster);
-//        fnatic.addTeamMember(new Player("FASHR", "Long"), fnaticRoster);
-//        fnatic.printTeamMembers(fnaticRoster);
-//}
