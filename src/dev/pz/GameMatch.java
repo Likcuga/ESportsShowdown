@@ -39,4 +39,7 @@ public class GameMatch {
         return null;
     }
 
+    public void setGameOutcome(GameOutcome gameOutcome) {
+        this.gameOutcome = gameOutcome.name();
+    }
 }
