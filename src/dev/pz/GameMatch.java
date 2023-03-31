@@ -5,7 +5,7 @@ enum MatchType{COMPETITIVE, EXHIBITION, FRIENDLY, TO_THE_DEATH, BATTLE_ROYALE}
 
 
 
-public class GameMatch {
+public class GameMatch<T> {
 
     private String gameOutcome;
     private int teamPoints;
